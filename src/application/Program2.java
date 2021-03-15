@@ -22,6 +22,20 @@ public class Program2 {
         for(Department depList : list){
             System.out.println(depList);
         }
+//        System.out.println("\n ==== TEST 3: Insert");
+//        Department tempDep = new Department(null, "bbbbb");
+//        depDao.insert(tempDep);
+//        System.out.println("Done! New department inserted!");
+
+        System.out.println("\n ==== TEST 4: Delete");
+        depDao.deleteById(0);
+        System.out.println("Done! department deleted!");
+
+        System.out.println("\n ==== TEST 5: Update");
+        dep = depDao.findById(4);
+        dep.setName("Books");
+        depDao.update(dep);
+        System.out.println("Done! Update complete");
 
     }
 }
